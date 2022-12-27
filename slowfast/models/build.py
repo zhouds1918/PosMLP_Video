@@ -37,11 +37,11 @@ def build_model(cfg, gpu_id=None):
     print(MODEL_REGISTRY)
     model = MODEL_REGISTRY.get(name)(cfg)
 
-    # if cfg.MODEL.ARCH in ['pos']:
-    #     checkpoint = model.get_pretrained_model(cfg)
-    #     if checkpoint:
-    #         print('load pretrained model')
-    #         model.load_state_dict(checkpoint, strict=False)
+    if cfg.MODEL.ARCH in ['pos']:
+        checkpoint = model.get_pretrained_model(cfg)
+        if checkpoint:
+            print('load pretrained model')
+            model.load_state_dict(checkpoint, strict=False)
 
             
     if cfg.NUM_GPUS:
