@@ -61,7 +61,7 @@ Specifically, we need to set the number of crops&clips and your checkpoint path 
 
 ## Acknowledgement
 
-This repository is built based on [SlowFast](https://github.com/facebookresearch/SlowFast) and [Uniformer](https://github.com/Sense-X/UniFormer) repository.
+This repository is built based on [SlowFast](https://github.com/facebookresearch/SlowFast) and [MorphMLP](https://github.com/MTLab/MorphMLP) repository.
 
 
 
