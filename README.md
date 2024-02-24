@@ -27,15 +27,12 @@ Please follow the installation instructions in [INSTALL.md](INSTALL.md). You may
 ### Testing
 
 We provide testing example as followed:
-### Kinetics400
-```shell
-python3 tools/run_net.py --cfg configs/K400/K400_MLP_S16x4.yaml DATA.PATH_PREFIX path_to_data TRAIN.ENABLE False  TEST.NUM_ENSEMBLE_VIEWS 4 TEST.NUM_SPATIAL_CROPS 1 TEST.CHECKPOINT_FILE_PATH your_model_path OUTPUT_DIR your_output_dir
+
 ```
 ### SomethingV1&V2
 ```shell
-python3 tools/run_net.py   --cfg configs/SSV1/SSV1_MLP_B32.yaml DATA.PATH_PREFIX your_data_path TEST.NUM_ENSEMBLE_VIEWS 1 TEST.NUM_SPATIAL_CROPS 3 TEST.CHECKPOINT_FILE_PATH your_model_path OUTPUT_DIR your_output_dir
+python3 tools/run_net.py   --cfg configs/SSV1/SSV1_MLP_S16.yaml DATA.PATH_PREFIX your_data_path TEST.NUM_ENSEMBLE_VIEWS 1 TEST.NUM_SPATIAL_CROPS 3 TEST.CHECKPOINT_FILE_PATH your_model_path OUTPUT_DIR your_output_dir
 ```
-python3 tools/run_net.py   --cfg configs/SSV1/SSV1_MLP_S16.yaml DATA.PATH_PREFIX /data/zhouds/som TEST.NUM_ENSEMBLE_VIEWS 1 TEST.NUM_SPATIAL_CROPS 3 TEST.CHECKPOINT_FILE_PATH your_model_path OUTPUT_DIR your_output_dir
 
 Specifically, we need to set the number of crops&clips and your checkpoint path then run multi-crop/multi-clip test:
 
